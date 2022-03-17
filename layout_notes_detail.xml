@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_notes_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotesDetailActivity">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.example.notes.TitleAndContentView
+        android:id="@+id/title_and_content_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar"/>
+
+
+    <TextView
+        android:id="@+id/notes_detail_edittext_modified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="bottom"
+        android:hint="Modified "
+        android:padding="4dp"
+        android:paddingBottom="16dp"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+
+    <View
+        android:id="@+id/label_view_more_actions"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/ic_baseline_more_vert_24" />
+
+    <FrameLayout
+        android:id="@+id/notes_detail_bottom_sheet_dialog_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        layout="@layout/layout_label_chip_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_and_content_view"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp" />
+
+
+    <!--    <com.google.android.material.bottomappbar.BottomAppBar-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="bottom"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        app:menu="@menu/bottom_nav_bar_menu"-->
+    <!--        tools:ignore="BottomAppBar" />-->
+    <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+    <!--        android:id="@+id/navigation"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_gravity="bottom"-->
+    <!--        app:menu="@menu/bottom_nav_bar_menu" />-->
+
+</RelativeLayout>
